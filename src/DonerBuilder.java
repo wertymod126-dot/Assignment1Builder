@@ -1,4 +1,4 @@
-abstract  class DonerBuilder {
+public class DonerBuilder {
     protected WrapType wrap;
     protected MeatType meat;
     protected boolean hasTomato = true;
@@ -8,9 +8,46 @@ abstract  class DonerBuilder {
     protected boolean hasGarlicSauce = false;
     protected boolean isSpicy = false;
 
-    public abstract DonerBuilder buildWrap();
-    public abstract DonerBuilder buildMeat();
-    public abstract DonerBuilder buildToppings();
+
+    public DonerBuilder withWrap(WrapType wrap) {
+        this.wrap = wrap;
+        return this;
+    }
+
+    public DonerBuilder withMeat(MeatType meat) {
+        this.meat = meat;
+        return this;
+    }
+
+    public DonerBuilder withFries(boolean hasFries) {
+        this.hasFries = hasFries;
+        return this;
+    }
+
+    public DonerBuilder withGarlicSauce(boolean hasGarlicSauce) {
+        this.hasGarlicSauce = hasGarlicSauce;
+        return this;
+    }
+
+    public DonerBuilder withPickles(boolean hasPickles) {
+        this.hasPickles = hasPickles;
+        return this;
+    }
+
+    public DonerBuilder withOnion(boolean isOnion) {
+        this.hasOnion = isOnion;
+        return this;
+    }
+
+    public DonerBuilder withTomato(boolean hasTomato) {
+        this.hasTomato = hasTomato;
+        return this;
+    }
+
+    public DonerBuilder makeSpicy(boolean isSpicy) {
+        this.isSpicy = isSpicy;
+        return this;
+    }
 
     public Doner build() {
         validateOrder();
@@ -19,13 +56,12 @@ abstract  class DonerBuilder {
 
     private void validateOrder() {
         if (wrap == null) {
-            throw new IllegalStateException("A doner must have valid wrap , like Lavash");
+            throw new IllegalStateException("A doner must have a valid wrap, like Lavash.");
         }
         if (meat == null) {
-            throw new IllegalStateException("A doner must have valid meat , like beef");
+            throw new IllegalStateException("A doner must have valid meat, like Beef.");
         }
     }
 
 
 }
-

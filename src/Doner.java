@@ -1,3 +1,5 @@
+
+
 enum WrapType {
     Lavash,
     CheeseLavash,
@@ -22,7 +24,9 @@ public class Doner {
     private final boolean hasGarlicSauce;
     private final boolean isSpicy;
 
-    Doner(DonerBuilder builder) {
+    //constructor
+
+    protected Doner(DonerBuilder builder) {
         this.wrap = builder.wrap;
         this.meat = builder.meat;
         this.hasTomato = builder.hasTomato;
@@ -35,7 +39,7 @@ public class Doner {
 
     @Override
     public String toString() {
-        return String.format("Doner [Wrap=%s, Meat=%s, Tomato=%b, Pickles=%b, Onion=%b, FriesInside=%b, GarlicSauce=%b, Spicy=%b]",
+        return String.format("Doner----------------- \n-----Wrap=%s,\n -----Meat=%s,\n -----Tomato=%b,\n -----Pickles=%b,\n -----Onion=%b,\n -----FriesInside=%b,\n -----GarlicSauce=%b,\n -----Spicy=%b\n",
                 wrap, meat, hasTomato, hasPickles, hasOnion, hasFries, hasGarlicSauce, isSpicy);
     }
 }
