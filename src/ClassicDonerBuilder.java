@@ -7,7 +7,7 @@ class ClassicDonerBuilder extends DonerBuilder {
 
     @Override
     public ClassicDonerBuilder buildMeat() {
-        this.meat = MeatType.Chicken;
+        this.meat = MeatType.Beef;
         return this;
     }
 

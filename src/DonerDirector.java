@@ -7,10 +7,10 @@ public class DonerDirector {
 
     public Doner constructDoner() {
         validateBuilder();
-        builder.buildWrap();
-        builder.buildMeat();
-        builder.buildToppings();
-        return builder.build();
+        return builder.buildWrap()
+                .buildMeat()
+                .buildToppings()
+                .build();
 
 
     }

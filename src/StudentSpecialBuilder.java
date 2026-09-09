@@ -1,7 +1,7 @@
 class StudentSpecialBuilder extends DonerBuilder {
     @Override
     public StudentSpecialBuilder buildWrap() {
-        this.wrap = WrapType.Lavash;
+        this.wrap = WrapType.CheeseLavash;
         return this;
     }
 
