@@ -6,14 +6,18 @@ public class DonerDirector {
     }
 
     public Doner constructDoner() {
-        if (this.builder == null) {
-            throw new IllegalStateException("builder is null");
-        }
+        validateBuilder();
         builder.buildWrap();
         builder.buildMeat();
         builder.buildToppings();
         return builder.build();
 
 
+    }
+
+    private void validateBuilder() {
+        if (this.builder == null) {
+            throw new IllegalStateException("builder is null");
+        }
     }
 }

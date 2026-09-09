@@ -8,9 +8,9 @@ abstract  class DonerBuilder {
     protected boolean hasGarlicSauce = false;
     protected boolean isSpicy = false;
 
-    public abstract void buildWrap();
-    public abstract void buildMeat();
-    public abstract void buildToppings();
+    public abstract DonerBuilder buildWrap();
+    public abstract DonerBuilder buildMeat();
+    public abstract DonerBuilder buildToppings();
 
     public Doner build() {
         validateOrder();

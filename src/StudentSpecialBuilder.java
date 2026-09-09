@@ -1,20 +1,23 @@
 class StudentSpecialBuilder extends DonerBuilder {
     @Override
-    public void buildWrap() {
+    public StudentSpecialBuilder buildWrap() {
         this.wrap = WrapType.Lavash;
+        return this;
     }
 
     @Override
-    public void buildMeat() {
+    public StudentSpecialBuilder buildMeat() {
         this.meat = MeatType.Chicken;
+        return this;
     }
 
     @Override
-    public void buildToppings() {
+    public StudentSpecialBuilder buildToppings() {
         this.hasTomato = false;
         this.hasPickles = false;
         this.hasFries = true;
         this.hasGarlicSauce = true;
         this.isSpicy = true;
+        return this;
     }
 }

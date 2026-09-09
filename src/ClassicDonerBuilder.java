@@ -1,16 +1,19 @@
 class ClassicDonerBuilder extends DonerBuilder {
     @Override
-    public void buildWrap() {
+    public ClassicDonerBuilder buildWrap() {
         this.wrap = WrapType.Lavash;
+        return this;
     }
 
     @Override
-    public void buildMeat() {
+    public ClassicDonerBuilder buildMeat() {
         this.meat = MeatType.Chicken;
+        return this;
     }
 
     @Override
-    public void buildToppings() {
+    public ClassicDonerBuilder buildToppings() {
         this.hasGarlicSauce = true;
+        return this;
     }
 }
