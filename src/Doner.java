@@ -35,11 +35,8 @@ public class Doner {
 
     @Override
     public String toString() {
-
         return String.format("Doner [Wrap=%s, Meat=%s, Tomato=%b, Pickles=%b, Onion=%b, FriesInside=%b, GarlicSauce=%b, Spicy=%b]",
-
-                wrap, meat, hasTomato,hasPickles, hasOnion, hasFries, hasGarlicSauce, isSpicy);
-
+                wrap, meat, hasTomato, hasPickles, hasOnion, hasFries, hasGarlicSauce, isSpicy);
     }
 }
 
