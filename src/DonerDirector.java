@@ -1,7 +1,7 @@
 public class DonerDirector {
 
-    public Doner constructClassicDoner(DonerBuilder donerBuilder) {
-        return donerBuilder.withWrap(WrapType.Lavash)
+    public Doner constructClassicDoner(DonerBuilder builder) {
+        return builder.withWrap(WrapType.Lavash)
                 .withMeat(MeatType.Beef)
                 .withFries(true)
                 .withGarlicSauce(true)
