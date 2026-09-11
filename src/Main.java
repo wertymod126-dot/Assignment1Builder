@@ -2,15 +2,15 @@ public class Main {
     public static void main(String[] args) {
         DonerDirector director = new DonerDirector();
 
-        Doner classicDoner = director.constructClassicDoner(new DonerBuilder());
+        Doner classicDoner = director.constructClassicDoner(new Doner.Builder());
         System.out.println("Made by Director (Classic): " + classicDoner);
 
-        Doner studentSpecial = director.constructStudentSpecial(new DonerBuilder());
+        Doner studentSpecial = director.constructStudentSpecial(new Doner.Builder());
         System.out.println("Made by Director (Student Special): " + studentSpecial);
 
-        Doner customDoner = new DonerBuilder()
-                .withWrap(WrapType.CheeseLavash)
-                .withMeat(MeatType.MixedMeat)
+        Doner customDoner = new Doner.Builder()
+                .withWrap(Doner.WrapType.CheeseLavash)
+                .withMeat(Doner.MeatType.MixedMeat)
                 .withFries(true)
                 .withGarlicSauce(true)
                 .withPickles(false)
@@ -18,9 +18,9 @@ public class Main {
                 .build();
         System.out.println("Custom Doner: " + customDoner);
 
-        Doner modifiedStudentDoner = new DonerBuilder()
-                .asStudentSpecial()
-                .withMeat(MeatType.Beef)
+        Doner modifiedStudentDoner = new Doner.Builder()
+                .withWrap(Doner.WrapType.Lavash)
+                .withMeat(Doner.MeatType.Beef)
                 .withPickles(true)
                 .build();
 

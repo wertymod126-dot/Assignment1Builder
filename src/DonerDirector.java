@@ -1,17 +1,18 @@
 public class DonerDirector {
 
-    public Doner constructClassicDoner(DonerBuilder builder) {
-        return builder.withWrap(WrapType.Lavash)
-                .withMeat(MeatType.Beef)
+    public Doner constructClassicDoner(Doner.Builder builder) {
+
+        return builder.withWrap(Doner.WrapType.Lavash)
+                .withMeat(Doner.MeatType.Beef)
                 .withFries(true)
                 .withGarlicSauce(true)
                 .makeSpicy(false)
                 .build();
     }
 
-    public Doner constructStudentSpecial(DonerBuilder builder) {
-        return builder.withWrap(WrapType.CheeseLavash)
-                .withMeat(MeatType.Chicken)
+    public Doner constructStudentSpecial(Doner.Builder builder) {
+        return builder.withWrap(Doner.WrapType.CheeseLavash)
+                .withMeat(Doner.MeatType.Chicken)
                 .withFries(true)
                 .withGarlicSauce(true)
                 .makeSpicy(true)
