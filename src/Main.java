@@ -16,16 +16,14 @@ public class Main {
                 .withPickles(false)
                 .makeSpicy(true)
                 .build();
-
         System.out.println("Custom Doner: " + customDoner);
 
-        Doner modifiedCustomDoner = director.constructStudentSpecial(new DonerBuilder()
+        Doner modifiedStudentDoner = new DonerBuilder()
+                .asStudentSpecial()
                 .withMeat(MeatType.Beef)
-                .withPickles(false)
-        );
+                .withPickles(true)
+                .build();
 
-
-        System.out.println("Modified Custom Doner: " + modifiedCustomDoner);
-
+        System.out.println("Modified Student Doner: " + modifiedStudentDoner);
     }
 }

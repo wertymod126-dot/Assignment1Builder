@@ -1,5 +1,3 @@
-
-
 enum WrapType {
     Lavash,
     CheeseLavash,
@@ -13,7 +11,6 @@ enum MeatType {
 }
 
 public class Doner {
-
 
     private final WrapType wrap;
     private final MeatType meat;
@@ -39,8 +36,7 @@ public class Doner {
 
     @Override
     public String toString() {
-        return String.format("Doner----------------- \n-----Wrap=%s,\n -----Meat=%s,\n -----Tomato=%b,\n -----Pickles=%b,\n -----Onion=%b,\n -----FriesInside=%b,\n -----GarlicSauce=%b,\n -----Spicy=%b\n",
+        return String.format("Doner----------------- \n-----Wrap = %s,\n -----Meat = %s,\n -----Tomato = %b,\n -----Pickles = %b,\n -----Onion = %b,\n -----FriesInside = %b,\n -----GarlicSauce = %b,\n -----Spicy = %b\n",
                 wrap, meat, hasTomato, hasPickles, hasOnion, hasFries, hasGarlicSauce, isSpicy);
     }
 }
-

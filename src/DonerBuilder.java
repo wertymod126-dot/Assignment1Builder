@@ -8,7 +8,6 @@ public class DonerBuilder {
     protected boolean hasGarlicSauce = false;
     protected boolean isSpicy = false;
 
-
     public DonerBuilder withWrap(WrapType wrap) {
         this.wrap = wrap;
         return this;
@@ -54,6 +53,24 @@ public class DonerBuilder {
         return new Doner(this);
     }
 
+    public DonerBuilder asClassic() {
+        this.wrap = WrapType.Lavash;
+        this.meat = MeatType.Beef;
+        this.hasGarlicSauce = true;
+        return this;
+    }
+
+    public DonerBuilder asStudentSpecial() {
+        this.wrap = WrapType.CheeseLavash;
+        this.meat = MeatType.Chicken;
+        this.hasTomato = false;
+        this.hasPickles = false;
+        this.hasFries = true;
+        this.hasGarlicSauce = true;
+        this.isSpicy = true;
+        return this;
+    }
+
     private void validateOrder() {
         if (wrap == null) {
             throw new IllegalStateException("A doner must have a valid wrap, like Lavash.");
@@ -62,6 +79,4 @@ public class DonerBuilder {
             throw new IllegalStateException("A doner must have valid meat, like Beef.");
         }
     }
-
-
 }
